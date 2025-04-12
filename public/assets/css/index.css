@@ -1,0 +1,677 @@
+/* =========================== */
+/* ==== GLOBAL STYLES ==== */
+/* =========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ---- Mode Sombre ---- */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* =========================== */
+/* ==== HERO SECTION ==== */
+/* =========================== */
+.hero-section {
+  background: url('../images/back_hero.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.hero-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #FF5722;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.hero-button:hover {
+  background: #E64A19;
+}
+
+/* =========================== */
+/* ==== NAVBAR TOUJOURS SOMBRE ==== */
+/* =========================== */
+.navbar {
+  background-color: #0D1B2A !important; /* Bleu foncé */
+  padding: 15px 20px;
+  border-bottom: 3px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Texte des liens */
+.navbar-nav .nav-link {
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+  color: white !important; /* Assurer le blanc */
+}
+
+/* Effet au survol */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* Assurer que la navbar reste sombre même en mode clair */
+.light-mode .navbar {
+  background-color: #0D1B2A !important; /* Même couleur sombre */
+  color: white !important;
+}
+
+/* Liens en mode clair */
+.light-mode .navbar-nav .nav-link {
+  color: white !important;
+}
+
+/* Effet au survol */
+.light-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* Mode Sombre */
+.dark-mode .navbar {
+  background-color: #0D1B2A !important; /* Assurer qu'elle ne change pas */
+  color: white !important;
+}
+
+.dark-mode .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+/* =========================== */
+/* ==== NAVBAR TOUJOURS SOMBRE ==== */
+/* =========================== */
+.navbar {
+  background-color: #0D1B2A !important; /* Bleu foncé */
+  padding: 10px 20px;
+  border-bottom: 3px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Titre du site "Scores Matches" */
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white !important; /* Toujours blanc */
+}
+
+/* Logo de la navbar */
+.logo {
+  height: 40px; /* Taille du logo */
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Style des liens de navigation */
+.navbar-nav .nav-link {
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white !important; /* Toujours blanc */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Effet au survol */
+.navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* 🔥 Mode Clair : Empêcher la navbar de devenir blanche */
+.light-mode .navbar {
+  background-color: #0D1B2A !important; /* Toujours sombre */
+  border-bottom: 3px solid #FF5722;
+}
+
+/* Mode Clair - Texte */
+.light-mode .navbar-nav .nav-link {
+  color: white !important; /* Toujours blanc */
+}
+
+.light-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+
+
+/* =========================== */
+/* ==== LISTE DES MATCHS ==== */
+/* =========================== */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.match-item {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(255, 87, 34, 0.2);
+  border-left: 5px solid #FF5722;
+}
+
+.match-item:hover {
+  background-color: #2a2a2a;
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(255, 87, 34, 0.3);
+}
+
+.match-info {
+  font-size: 14px;
+  color: #bbb;
+  min-width: 80px;
+}
+
+.match-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.match-score {
+  font-size: 22px;
+  font-weight: bold;
+  color: #FF5722;
+}
+
+.match-details-btn {
+  background-color: #FF5722;
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.match-details-btn:hover {
+  background-color: #E64A19;
+}
+
+/* =========================== */
+/* ==== PUBLICATIONS ==== */
+/* =========================== */
+.publication-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.publication-card:hover {
+  background: #f8f9fa;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.publication-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.publication-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.publication-title:hover {
+  text-decoration: underline;
+}
+
+.publication-meta {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* =========================== */
+/* ==== MODE SOMBRE ==== */
+/* =========================== */
+.dark-mode .navbar,
+.dark-mode .match-item,
+.dark-mode .publication-card {
+  background-color: #1c1c1c;
+  border-color: #FF5722;
+  box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.2);
+}
+
+.dark-mode .match-score {
+  color: #FF5722;
+}
+
+.dark-mode .publication-card:hover {
+  background-color: #2a2a2a;
+}
+/* =========================== */
+/* ==== MODE CLAIR ==== */
+/* =========================== */
+.light-mode {
+  background-color: #F3F4F6; /* Fond gris clair doux */
+  color: #333;
+}
+
+/* Ombre douce pour donner de la profondeur */
+
+.light-mode .match-item,
+.light-mode .publication-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.light-mode .navbar {
+  background-color: #ffffff; /* Fond blanc cassé */
+  border-bottom: 3px solid #FF5722; /* Ligne orange */
+}
+
+/* Liens en mode clair */
+.light-mode .navbar-nav .nav-link {
+  color: white !important;
+}
+
+/* Effet au survol */
+.light-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+.light-mode .match-item {
+  background-color: #ffffff; /* Fond blanc */
+  color: #333;
+  border-left: 5px solid #FF5722; /* Bordure orange */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .match-item:hover {
+  background-color: #F0F0F0; /* Gris clair doux */
+}
+.light-mode .publication-card {
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .publication-card:hover {
+  background-color: #F5F5F5;
+}
+.light-mode footer {
+  background-color: #F3F4F6; /* Fond gris clair doux */
+  color: #333;
+}
+
+
+/* =========================== */
+/* ==== FOOTER ==== */
+/* =========================== */
+footer {
+  background-color: #0D1B2A;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #FF5722;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* =========================== */
+/* ==== HERO SECTION ==== */
+/* =========================== */
+.hero-section {
+  background: url('../images/back_.png') center/cover no-repeat; /* Image pour mode sombre */
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Overlay pour améliorer la visibilité */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Contenu Hero */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* =========================== */
+/* ==== PUBLICATIONS - MODE SOMBRE ==== */
+/* =========================== */
+.dark-mode .publication-card {
+  background-color: #222; /* Fond légèrement plus clair pour contraster */
+  color: white;
+  border: 1px solid #333; /* Bordure discrète */
+  box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.2);
+}
+
+/* Texte des publications */
+.dark-mode .publication-title {
+  color: #ffffff; /* Titre en blanc */
+  font-weight: bold;
+}
+
+.dark-mode .publication-meta {
+  color: #bbbbbb; /* Date de publication plus lisible */
+}
+
+/* Contenu du texte des publications */
+.dark-mode .publication-card p {
+  color: #dddddd; /* Texte plus clair */
+}
+
+/* Hover effect */
+.dark-mode .publication-card:hover {
+  background-color: #2a2a2a;
+  box-shadow: 0 6px 15px rgba(255, 87, 34, 0.3);
+}
+
+
+/* =========================== */
+/* ==== MODE CLAIR HERO ==== */
+/* =========================== */
+.light-mode .hero-section {
+  background: url('../images/back_.png') center/cover no-repeat; /* Image différente pour le mode clair */
+  color: #333;
+}
+
+.light-mode .hero-overlay {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.light-mode .hero-content p {
+  color: #222;
+}
+
+
+/* =========================== */
+/* ==== BOUTON MODE SOMBRE ==== */
+/* =========================== */
+.theme-switch {
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.theme-switch:hover {
+  transform: scale(1.1);
+}
+
+/* =========================== */
+/* ==== STYLISATION DE LA NAVBAR ==== */
+/* =========================== */
+.navbar {
+  background-color: #0D1B2A !important; /* Bleu foncé */
+  padding: 10px 20px;
+  border-bottom: 3px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Logo de la navbar */
+.logo {
+  height: 40px; /* Taille du logo */
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Titre du site "Scores Matches" */
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white; /* Mode sombre */
+}
+
+/* Mode Clair - Ajustement du texte */
+.light-mode .site-title {
+  color: #FF5722 !important; /* Orange */
+}
+
+/* Mode Clair - Navbar */
+.light-mode .navbar {
+  background-color: white !important; /* Fond blanc */
+  border-bottom: 3px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mode Clair - Texte des liens */
+.light-mode .navbar-nav .nav-link {
+  color: #222 !important; /* Texte foncé */
+}
+
+/* Effet au survol en mode clair */
+.light-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* Mode Sombre - Navbar */
+.dark-mode .navbar {
+  background-color: #0D1B2A !important; /* Toujours sombre */
+  color: white !important;
+}
+
+.dark-mode .site-title {
+  color: white !important; /* Texte blanc en mode sombre */
+}
+
+/* Mode Sombre - Liens */
+.dark-mode .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* =========================== */
+/* ==== RESPONSIVE DESIGN ==== */
+/* =========================== */
+@media (max-width: 768px) {
+  .logo {
+      height: 35px; /* Taille du logo réduite sur mobile */
+  }
+
+  .site-title {
+      font-size: 18px;
+  }
+}
+
+/* =========================== */
+/* 🔥 GARDER LA NAVBAR TOUJOURS SOMBRE 🔥 */
+/* =========================== */
+.navbar {
+  background-color: #0D1B2A !important; /* Toujours sombre */
+  padding: 10px 20px;
+  border-bottom: 3px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Logo de la navbar */
+.logo {
+  height: 40px; /* Taille du logo */
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Titre du site "Scores Matches" */
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white !important; /* Toujours blanc */
+}
+
+/* Style des liens de navigation */
+.navbar-nav .nav-link {
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white !important; /* Toujours blanc */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Effet au survol */
+.navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* 🔥 Mode Clair : Empêcher la navbar de devenir blanche */
+.light-mode .navbar {
+  background-color: #0D1B2A !important; /* Toujours sombre */
+  color: white !important;
+}
+
+/* Mode Clair - Texte des liens */
+.light-mode .navbar-nav .nav-link {
+  color: white !important; /* Toujours blanc */
+}
+
+.light-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* Mode Sombre - Navbar */
+.dark-mode .navbar {
+  background-color: #0D1B2A !important; /* Toujours sombre */
+  color: white !important;
+}
+
+.dark-mode .site-title {
+  color: white !important; /* Texte blanc */
+}
+
+/* Mode Sombre - Liens */
+.dark-mode .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* =========================== */
+/* 🔥 RESPONSIVE DESIGN 🔥 */
+/* =========================== */
+@media (max-width: 768px) {
+  .logo {
+      height: 35px; /* Taille du logo réduite sur mobile */
+  }
+
+  .site-title {
+      font-size: 18px;
+  }
+}
+

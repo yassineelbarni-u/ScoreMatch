@@ -1,0 +1,101 @@
+/* 🌟 Styles Généraux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: 0.3s;
+}
+
+/* 📋 Carte du Match */
+.match-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.match-card:hover {
+  transform: scale(1.02);
+}
+
+/* 🏆 Match Info */
+.match-info {
+  text-align: center;
+}
+
+.match-info img {
+  max-width: 80px; /* 🔹 Réduction de la taille des logos */
+  height: auto;
+}
+
+/* 📊 Statistiques */
+.stats-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+}
+
+.stats-list li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* 📋 Tableau des Joueurs */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #007bff;
+  color: white;
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* 🌙 Mode Sombre */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .match-card,
+.dark-mode .stats-card {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark-mode .table {
+  background: #1c1c1c;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark-mode .table thead {
+  background: #333;
+  color: white;
+}
+
+.dark-mode img {
+  filter: brightness(0.8);
+}
+
+.dark-mode .btn-primary {
+  background: #ff5722;
+  border-color: #ff5722;
+}
+
+.dark-mode .btn-primary:hover {
+  background: #e64a19;
+  border-color: #e64a19;
+}

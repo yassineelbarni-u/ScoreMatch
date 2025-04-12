@@ -1,0 +1,211 @@
+/* =========================== */
+/* ==== GLOBAL STYLES ==== */
+/* =========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* =========================== */
+/* ==== NAVBAR (Fixé en mode sombre) ==== */
+/* =========================== */
+.navbar {
+  background-color: #0D1B2A !important;
+  padding: 15px 20px;
+  border-bottom: 3px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link {
+  font-weight: bold;
+  padding: 10px 15px;
+  color: white !important;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: #FF5722;
+  color: white !important;
+}
+
+/* =========================== */
+/* ==== STYLE GÉNÉRAL DES CARTES ==== */
+/* =========================== */
+.card-custom {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  border-left: 5px solid #FF5722;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================== */
+/* ==== STYLE POUR LES MATCHES ==== */
+/* =========================== */
+.match-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  border-left: 5px solid #FF5722;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.match-info {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.match-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.team img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.team-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.match-vs {
+  font-size: 22px;
+  font-weight: bold;
+  color: #FF5722;
+}
+
+/* =========================== */
+/* ==== STYLE POUR LES ÉQUIPES ==== */
+/* =========================== */
+.team-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  border-left: 5px solid #FF5722;
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.team-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.team-card .card-body {
+  flex: 1;
+  padding: 10px;
+}
+
+.team-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.team-card .btn-primary {
+  background-color: #FF5722;
+  border-color: #FF5722;
+  transition: 0.3s ease-in-out;
+}
+
+.team-card .btn-primary:hover {
+  background-color: #E64A19;
+  border-color: #E64A19;
+}
+
+/* =========================== */
+/* ==== MODE SOMBRE (UNIFORME) ==== */
+/* =========================== */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .card-custom,
+.dark-mode .match-card,
+.dark-mode .team-card {
+  background-color: #1e1e1e;
+  border-left: 5px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.2);
+}
+
+.dark-mode .card-title,
+.dark-mode .team-name {
+  color: white;
+}
+
+.dark-mode .match-vs {
+  color: #FF5722;
+}
+
+.dark-mode .btn-primary {
+  background-color: #FF5722;
+  border-color: #FF5722;
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #E64A19;
+  border-color: #E64A19;
+}
+
+.dark-mode .input-group input {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark-mode .input-group input::placeholder {
+  color: #bbb;
+}
+
+.dark-mode .input-group .btn-primary {
+  background-color: #FF5722;
+  border-color: #FF5722;
+}
+
+.dark-mode .input-group .btn-primary:hover {
+  background-color: #E64A19;
+  border-color: #E64A19;
+}

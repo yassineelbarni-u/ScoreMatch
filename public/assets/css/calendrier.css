@@ -1,0 +1,137 @@
+/* =========================== */
+/* ==== CALENDRIER SANS NOM DES ÉQUIPES ==== */
+/* =========================== */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Style de la carte des matchs */
+.match-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 5px solid #FF5722;
+}
+
+.match-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Date et heure */
+.match-info {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+/* Conteneur principal (Les équipes et le VS bien alignés) */
+.match-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Masquer les noms des équipes */
+.team-name {
+  display: none;
+}
+
+/* Equipes (Affichage uniquement des logos) */
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* VS bien centré */
+.match-vs {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF5722;
+}
+
+/* Rendre toute la carte cliquable */
+.match-card {
+  cursor: pointer;
+  position: relative; /* Permet de contenir le pseudo-élément */
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.match-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================== */
+/* ==== MODE SOMBRE ==== */
+/* =========================== */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .match-card {
+  background-color: #1c1c1c;
+  border-left: 5px solid #FF5722;
+  box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.2);
+}
+
+.dark-mode .match-info {
+  color: #bbbbbb;
+}
+
+.dark-mode .match-vs {
+  color: #FF5722;
+}
+
+.dark-mode .match-details-btn {
+  background-color: #FF5722;
+}
+
+.dark-mode .match-details-btn:hover {
+  background-color: #E64A19;
+}
+
+/* Centrer les équipes dans la carte */
+.match-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centre les équipes */
+  gap: 20px; /* Espacement entre les éléments */
+  width: 100%;
+  text-align: center;
+}
+
+/* Assurer que les équipes et le "VS" sont bien alignés */
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centrer le texte sous les logos */
+.team-name {
+  text-align: center;
+}
+
