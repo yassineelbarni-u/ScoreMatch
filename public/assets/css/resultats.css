@@ -1,0 +1,168 @@
+/* =========================== */
+/* ==== BACKGROUND GÉNÉRAL ==== */
+/* =========================== */
+body {
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Mode Clair */
+.light-mode {
+  background: url('../images/background_light.png') center/cover no-repeat; 
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* Mode Sombre */
+.dark-mode {
+  background: url('../images/background_dark.png') center/cover no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* =========================== */
+/* ==== CONTENEUR PRINCIPAL ==== */
+/* =========================== */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Mode Sombre - Conteneur */
+.dark-mode .container {
+  background-color: rgba(30, 30, 30, 0.9); 
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.2);
+}
+
+/* =========================== */
+/* ==== LISTE DES MATCHS ==== */
+/* =========================== */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Match Item (Carte Cliquable) */
+.match-item {
+  background: linear-gradient(135deg, #2c3e50, #4a69bd);
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  transition: transform 0.2s ease-in-out, background 0.3s;
+  cursor: pointer; /* Rend la carte cliquable */
+  border-left: 5px solid #FF5722;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.match-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mode Sombre - Match Item */
+.dark-mode .match-item {
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  border-left: 5px solid #FF5722;
+  box-shadow: 0 4px 6px rgba(255, 87, 34, 0.2);
+}
+
+/* Mode Clair - Match Item */
+.light-mode .match-item {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  color: #333;
+  border-left: 5px solid #FF5722;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .match-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Infos du match */
+.match-info {
+  font-size: 14px;
+  color: #ddd;
+  min-width: 90px;
+  text-align: center;
+}
+
+/* Mode Clair - Infos du match */
+.light-mode .match-info {
+  color: #666;
+}
+
+/* Contenu du match */
+.match-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* Logos des équipes */
+.team img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+
+.team img:hover {
+  transform: scale(1.1);
+}
+
+/* Score du match */
+.match-score {
+  font-size: 22px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 60px;
+}
+
+/* Mode Clair - Score */
+.light-mode .match-score {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* =========================== */
+/* ==== RESPONSIVE DESIGN ==== */
+/* =========================== */
+@media (max-width: 600px) {
+  .match-item {
+      flex-direction: column;
+      text-align: center;
+      padding: 16px;
+  }
+
+  .match-content {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .team img {
+      width: 45px;
+      height: 45px;
+  }
+
+  .match-score {
+      font-size: 20px;
+      padding: 5px 12px;
+  }
+}
